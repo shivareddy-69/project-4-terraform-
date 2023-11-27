@@ -83,11 +83,11 @@ resource "aws_security_group" "pub-sg" {
 }
 
 resource "aws_instance" "web-1" {
-  ami                    = "ami-06aa3f7caf3a30282"
+  ami                    = "ami-0fa1ca9559f1892ec"
   vpc_security_group_ids = ["${aws_security_group.pub-sg.id}"]
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "new account"
+  key_name               = "shiva"
   subnet_id              = aws_subnet.Web-1-subnet.id
   user_data              = file("data.sh")
   tags = {
