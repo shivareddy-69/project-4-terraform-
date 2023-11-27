@@ -87,7 +87,7 @@ resource "aws_instance" "web-1" {
   vpc_security_group_ids = ["${aws_security_group.pub-sg.id}"]
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "shiva"
+  key_name               = "sam account"
   subnet_id              = aws_subnet.Web-1-subnet.id
   user_data              = file("data.sh")
   tags = {
